@@ -1,0 +1,303 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>网站设计协会官网</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="湘潭大学,网站设计协会" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<!--scrolling-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!--scrolling-->
+</head>
+<body>	
+<!--top-header-->
+<div id="home" class="top-header">
+	 <div class="container">
+		 <div class="logo">
+				<h1><a href="index.html">home</a></h1>
+		 </div>
+		 <div class="top-menu">
+			 <span class="menu"><img src="images/nav-icon.png" alt=""/></span>
+			 <ul>
+				<li><a class="scroll" href="#home">主页</a></li>
+				<li><a class="scroll" href="#about">关于</a></li>
+				<li><a class="scroll" href="#service">学习</a></li>
+				<li><a class="scroll" href="#gallery">展区</a></li>
+				<li><a class="scroll" href="#contact">报名</a></li>
+				<li><a class="scroll" href="#footer">版权</a></li>
+			 </ul>
+			 
+		     <!-- script-for-menu -->
+				 <script>					
+							$("span.menu").click(function(){
+								$(".top-menu ul").slideToggle("slow" , function(){
+								});
+							});
+				 </script>
+		     <!-- script-for-menu -->
+		  </div>
+	 </div>
+</div>	
+<!--header-->
+<div class="header">
+		<div class="container">
+			 <div class="banner-info">
+				 <h2>网站设计协会欢迎您</h2>
+				 <p>本社团全称为网站设计协会，是在校社联领导、指导下的于2005年10月份在校正式登记注册的以学生共同的理想和爱好，自愿组织起来的学术性团体。 
+				 </p>
+				 <a href="#">Click</a>
+			 </div>
+			 <div class="clearfix"></div>
+		</div>
+</div>
+<!--Service-->
+<div id="service" class="service">
+	 <div class="container">
+		 <h3>Study</h3>	
+		 <div class="service-grids">
+		 <div class="icon-grids">
+			 <div class="col-md-6 futr-grid futr1">
+				 <div class="icon-pic">
+						<div class="icon text-center">
+						 <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+						 </div>
+				  </div>
+				 <div class="icon-info">
+						 <h4><a href="#">移动端开发</a></h4>							
+						 <p>基于手机或者具有多种应用功能的智能手机以及平板电脑移动设备的网页开发,手机应用的制作</p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+			 <div class="col-md-6 futr-grid">
+				  <div class="icon-pic">
+							<div class="icon text-center">
+							<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+						 </div>
+				  </div>
+				  <div class="icon-info">
+						<h4><a href="#">网站测试</a></h4>						 
+						<p>为了良好的用户体验，对于网站的界面测试、功能测试、性能测试、可用性测试(接口测试）、客户端兼容性、安全性</p>
+				  </div>
+				  <div class="clearfix"></div>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+		 <div class="icon-grids grids2">
+			 <div class="col-md-6 futr-grid futr1">
+				 <div class="icon-pic">
+						<div class="icon text-center">
+						 <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+						 </div>
+				  </div>
+				 <div class="icon-info">
+						 <h4><a href="#">图片处理</a></h4>							
+						 <p>对于Photoshop图片软件的使用，海报，网页设计。。。</p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+			 <div class="col-md-6 futr-grid">
+				  <div class="icon-pic">
+							<div class="icon text-center">
+							 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+						 </div>
+				  </div>
+				  <div class="icon-info">
+						<h4><a href="#">办公软件</a></h4>						 
+						<p>学习使用word,Excel的常用办公软件，提高工作效率</p>
+				  </div>
+				  <div class="clearfix"></div>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+		 </div>
+	 </div>
+</div>
+<!--about-->
+<div id="about" class="about">	 
+	 <div class="about-left"></div>
+	 <div class="about-right">
+		<h3>About Us</h3>
+		<h4>湘潭大学网站设计协会</h4>
+		<p>本社团以服务湘大师生，传播网络技术文化，加强学生的动手能力和创新能力为宗旨，以开展技术讲座、培训、研讨、竞赛的形式参与网页制作以及计算机相关领域的研究等方式和途径，为校内外有需要的部门、社团进行网站的设计维护，在校内外开展活动。</p>		
+	 </div>
+	 <div class="clearfix"></div>
+</div>
+<!--gallery -->
+		<script src="js/jquery.chocolat.js"></script>		
+		<!--light-box-files -->
+		<script type="text/javascript">
+		$(function() {
+			$('.moments-bottom a').Chocolat();
+		});
+		</script> 
+<!--gallery js-->
+<div id="gallery" class="gallery">
+	 <div class="container">
+		 <h3>Gallery</h3>
+         <div class="gallery-info">
+				<div class="col-md-4 galry-grids moments-bottom">
+					<a class="b-link-stripe b-animate-go" href="images/img15.jpg">
+						<img src="images/img15.jpg" class="img-responsive" alt="">
+						<div class="b-wrapper">
+							<span class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" src="images/e.png" alt=""/>
+							</span>					
+						</div>
+					</a>				
+				</div>
+				<div class="col-md-4 galry-grids moments-bottom">
+					<a class="b-link-stripe b-animate-go" href="images/img10.jpg">
+						<img src="images/img10.jpg" class="img-responsive" alt="">
+						<div class="b-wrapper">
+							<span class="b-animate b-from-left b-delay03 ">
+								<img class="img-responsive" src="images/e.png" alt=""/>
+							</span>					
+						</div>
+					</a>				
+				</div>
+				<div class="col-md-4 galry-grids moments-bottom">
+					<a class="b-link-stripe b-animate-go" href="images/img11.jpg">
+						<img src="images/img11.jpg" class="img-responsive" alt="">
+						<div class="b-wrapper">
+							<span class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" src="images/e.png" alt=""/>
+							</span>					
+						</div>
+					</a>				
+				</div>				
+				<div class="col-md-4 galry-grids moments-bottom">
+					<a class="b-link-stripe b-animate-go" href="images/img12.jpg">
+						<img src="images/img12.jpg" class="img-responsive" alt="">
+						<div class="b-wrapper">
+							<span class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" src="images/e.png" alt=""/>
+							</span>					
+						</div>
+					</a>				
+				</div>
+				<div class="col-md-4 galry-grids moments-bottom">
+					<a class="b-link-stripe b-animate-go" href="images/img13.jpg">
+						<img src="images/img13.jpg" class="img-responsive" alt="">
+						<div class="b-wrapper">
+							<span class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" src="images/e.png" alt=""/>
+							</span>					
+						</div>
+					</a>				
+				</div>
+				<div class="col-md-4 galry-grids moments-bottom">
+					<a class="b-link-stripe b-animate-go" href="images/img14.jpg">
+						<img src="images/img14.jpg" class="img-responsive" alt="">
+						<div class="b-wrapper">
+							<span class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" src="images/e.png" alt=""/>
+							</span>					
+						</div>
+					</a>				
+				</div>
+				<div class="col-md-4 galry-grids moments-bottom">
+					<a class="b-link-stripe b-animate-go" href="images/img9.jpg">
+						<img src="images/img9.jpg" class="img-responsive" alt="">
+						<div class="b-wrapper">
+							<span class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" src="images/e.png" alt=""/>
+							</span>					
+						</div>
+					</a>				
+				</div>
+				<div class="col-md-4 galry-grids moments-bottom">
+					<a class="b-link-stripe b-animate-go" href="images/img16.jpg">
+						<img src="images/img16.jpg" class="img-responsive" alt="">
+						<div class="b-wrapper">
+							<span class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" src="images/e.png" alt=""/>
+							</span>					
+						</div>
+					</a>				
+				</div>
+				<div class="col-md-4 galry-grids moments-bottom">
+					<a class="b-link-stripe b-animate-go" href="images/img17.jpg" >
+						<img src="images/img17.jpg" class="img-responsive" alt="">
+						<div class="b-wrapper">
+							<span class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" src="images/e.png" alt=""/>
+							</span>					
+						</div>
+					</a>				
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+	 </div>
+</div>
+<!---->
+
+
+<div id="contact" class="contact">
+	 <div class="container">
+		 <h3>报名</h3>
+		 <div class="touch-top">
+			 <div class="col-md-8 touch-left">
+				 <form id="myForm" novalidate>
+					<input id="name" type="text" name="Name" placeholder="请输入您的姓名" />
+					<input id="phone" type="text" name="Phone" placeholder="请输入您的电话"/>
+					<input id="QQ" type="text" name="QQ" placeholder="请输入您的QQ"/>
+					<input id="class" type="text" name="Class" placeholder="请输入您的专业"/>
+					<textarea id="info" id="info" name="Info" placeholder="请输入您的自我介绍"></textarea>
+					<input id="submit" type="button" value="SUBMIT">				
+				 </form>	
+			 </div>
+			 <div class="col-md-4 touch-right">
+					<div class="touch-right-top">
+							<span class="add"> </span>
+							<h4>123 MAIN STREET,<label>CITY, COUNTRY</label></h4>
+					</div>
+					<div class="touch-right-top">
+							<span class="mail"> </span>
+							<p><a href="mailto:example@email.com">EMAIL@DOMAIN.COM</a></p>
+					</div>
+					<div class="touch-right-top">
+							<span class="num"> </span>
+							<p>+0123 456 789</p>
+					</div>
+			 </div>
+				<div class="clearfix"></div>
+		  </div>
+	 </div>
+</div>
+<div id="footer" class="footer">
+	 <div class="container">
+		 <p>Copyrights © 网站设计协会</p>
+		 
+		 <div class="arrow">
+			 <a class="scroll" href="#home"><img src="images/top.png" alt=""></a>
+		 </div>
+	 </div>
+</div>
+<!---->
+<script type="text/javascript">
+		$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</body>
+<script src="js/global.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/index.js"></script>
+
+</html>		
+	

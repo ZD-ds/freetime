@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax实现Comet</title>
+</head>
+<body>
+    
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script>
+   
+        if (window.XMLHttpRequest) {
+            var xhr = new XMLHttpRequest();
+        } else { //IE6及其以下版本浏览器
+            var xhr = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+    console.log(xhr);
+    
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readState);
+        if(xhr.readyState===3&&xhr.status===200){
+            console.log(xhr.responseText);
+            console.log("/n/n");
+              
+        }
+    }
+    xhr.open("get","/ajax",true);
+    xhr.send("");
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EventSource实现Comet</title>
+</head>
+<body>
+    
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script>
+    
+    var evtSource = new EventSource('/data');
+    //收到服务器发生的事件时触发
+        evtSource.onmessage = function (e) {
+        console.log(e.data);
+    }
+    //成功与服务器发生连接时触发
+        evtSource.onopen = function () {
+            console.log("Server open")
+    } 
+    //出现错误时触发
+    evtSource.onerror = function () {
+        console.log("Error")
+        } 
+</script>
+</html>

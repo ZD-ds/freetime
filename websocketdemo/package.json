@@ -1,0 +1,11 @@
+{
+  "name": "websockettest",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "socket.io": "^2.1.0"
+  }
+}

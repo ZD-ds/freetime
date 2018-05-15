@@ -1,0 +1,15 @@
+{
+    "apps":[
+        {
+            "name":"Mobilemap node service",
+            "script":"app.js",
+            "logo_date_format":"YYY-MM-DD HH:mm Z",
+           "error_file":"/home/zd/zdstudy/5月15日/nodetest/logs/error.log",
+            "out_file":"/home/zd/zdstudy/5月15日/nodetest/logs/access.log",
+            "watch":true,
+            "instances":"max",
+            "exec_mode":"cluster"
+        }
+       
+    ]
+}

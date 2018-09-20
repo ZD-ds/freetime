@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /**es5和es6 class定义对象的区别
+        class的构造函数必须使用new进行调用，普通构造函数不用new也可执行。
+        class不存在变量提升，es5中的function存在变量提升。
+        class内部定义的方法不可枚举，es5在prototype上定义的方法可以枚举
+    */
+    'use strict';
+    var Person = function () {
+        function Person(age, name) {
+            //调用了_classCallCheck检查Person是否为构造函数函数
+            _classCallCheck(this.Person);
+            this.age = age;
+            this.name = name;
+            this.cry = function () {
+                console.log(name + "is crying!!!TT");
+            }
+        }
+        //这个函数模拟把方法挂在原型上（他把原型看成类）
+        _createClass(Person, [{
+            key: 'sayName',
+            value: function sayName() {
+                console.log(this.name);
+            }
+        }]);
+        return Person;
+    }();
+
+    //对于构造函数进行判别
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("cannot call a class a function");
+        }
+    }
+    //处理class中的方法
+    var _createClass = function () {
+        function defineProperties(target, props) {
+            for (var i = 0; i < props.length; i++) {
+                var descriptor = props[i];
+                descriptor.enumerable = descriptor.enumerable || false;
+                descriptor.configurable = true;
+                if ('value' in descriptor) descriptor.writable = true;
+                Object.defineProperty(target, descriptor.key, descriptor.value);
+            }
+        }
+        return function (Constructor, protoProps, staticProps) {
+            if (protoProps) defineProperties(Constructor.prototype, protoProps);
+            if (staticProps) defineProperties(Constructor, staticProps);
+            return Constructor;
+        }
+    }();
+
+    //等价与下面
+    class Person {
+        constructor(age, name) {
+            this.age = age;
+            this.name = name;
+            this.cry = function () {
+                console.log(name + 'is crying!!! T^T');
+            }
+        }
+        sayName() {
+            console.log(this.name);
+        }
+    }
+
+</script>
+
+</html>

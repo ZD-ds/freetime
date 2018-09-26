@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Set() {
+        var items = {},
+        var length = 0;
+        this.has = function (val) {
+            return items.hasOwnProperty(val);
+        }
+        //增加操作
+        this.add = function (val) {
+            if (!this.has(val)) {
+                items[val] = val;
+                length++;
+                return true;
+            }
+            return false;
+        }
+        //删除操作
+        this.remove = function (val) {
+            if (this.has(val)) {
+                delete items[val];
+                length -= 1;
+                return true;
+            }
+            return false;
+        }
+        //清除
+        this.clear = function () {
+            items = {};
+            length = 0
+            return true
+        }
+        //获得大小
+        this.size = function () {
+            return length;
+        }
+        this.values = function () {
+            return Object.keys(items);
+        }
+    }
+    var set = new Set();
+    set.add(1);
+    //求并集
+    Set.prototype.union = function (otherSet) {
+        var unionSet = new Set();
+        var values = this.values();
+        for (var i = 0; i < values.length; i++) {
+            unionSet.add(values[i]);
+        }
+        values = otherSet.values();
+        for (var i = 0; i < values.length; i++) {
+            unionSet.add(values[i]);
+        }
+        return unionSet;
+    }
+    //求交集
+    Set.prototype.intersection = function (otherSet) {
+        var intersectionSet = new Set();
+        var values = this.values();
+        for (var i = 0; i < values.length; i++) {
+            if (otherSet.has(values[i])) {
+                intersectionSet.add(values[i]);
+            }
+        }
+
+        return intersectionSet;
+    }
+    //求差集
+    Set.prototype.difference = function (otherSet) {
+        var differenceSet = new Set();//存放结果
+        var values = this.values();
+        for (var i = 0; i < values.length; i++) {
+            if (!otherSet.has(values[i])) {          //只放入集合otherSet中没有的
+                differenceSet.add(values[i])
+            }
+        }
+        return differenceSet;
+    }
+
+
+
+
+</script>
+
+</html>

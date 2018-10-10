@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //实现bind
+    var a = 1;
+    var obj = {
+        a: 3
+    }
+    function b(x, y) {
+        console.log(this.a, x, y);
+    }
+    Function.prototype.mybind = function (obj) {
+        var that = this;
+        var arg = that.arguments;
+        return function (arg) {
+            obj._fn_ = that;
+            obj._fn_(arg);
+            delete obj._fn_;
+        }
+    }
+    b.mybind(obj)(6);
+    //实现call 函数最后参数有...表示无限参数
+    Function.prototype.myCall = function (obj, ...arg) {
+        var that = this;
+        obj._fn_ = that;
+        obj._fn_(...arg);
+    }
+    b.myCall(obj, 1, 3);
+    //实现apply
+    Function.prototype.myapply = function (obj, arg) {
+        var that = this;
+        obj._fn_ = that;
+        obj._fn_(...arg);
+    }
+    b.myapply(obj, [1, 3]);
+</script>
+
+</html>
